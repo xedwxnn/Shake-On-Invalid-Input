@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../assets/icon/icon.png">
   <script src="../scripts/main.js" defer></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <div class="wrapper">
-    <div id="inputWrapper">
-      <input type="text">
-    </div>
+    <div class="inputWrapper">
+      <div class="errorMessage">
+        <p id="textError"><i class='bx bx-error-circle'></i>Input is empty</p>
+      </div>
 
-    <button id="button">Submit</button>
+      <input id="input" type="text" placeholder="Write something">
+      <button id="button">Submit</button>
+    </div>
   </div>
 </body>
 </html>
