@@ -68,21 +68,44 @@ button:hover {
     transform: scale(1.02);
 }
 
-p {
+.errorMessage {
+    display: none;
     color: var(--error-color);
     font-size: 20px;
+    width: 80%;
 }
 
-div .errorMessage, p {
-    display: none;
+.errorMessage.active, p {
+    display: flex;
     align-items: center;
-    width: 80%;
 }
 
 i {
     margin-right: 1px;
 }
 
-.errorMessage.active {
-    display: flex;
+.shake {
+    animation: shake .5s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
